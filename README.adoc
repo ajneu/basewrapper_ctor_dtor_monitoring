@@ -1,0 +1,8 @@
+# basewrapper_ctor_dtor_monitoring
+
+Nice wrappers for monitoring constructor/destructor behaviour, 
+as well as tracking object-instances "of the same value" (due to copy construction, copy-assignment) 
+via reference countring. 
+
+Memory for e.g. ref counters is either automatically allocated on the heap (if constructor passed nullptr) 
+or can be passed in from the outside (as non-nullptr that typically points to the stack).
