@@ -220,7 +220,7 @@ class BaseWrapper : public RefCountWithData<std::string> {
      If a pointer is nullptr, then constructor allocates on heap; else pass in memory from outside [typically from stack].
   */
 public:
-  BaseWrapper(const std::string &name_, std::string *name_ptr = nullptr, RefCount::cnt_t *cnt_ptr = new RefCount::cnt_t)
+  BaseWrapper(const std::string &name_, std::string *name_ptr = nullptr, RefCount::cnt_t *cnt_ptr = nullptr)
     : RefCountWithData<std::string>{name_, name_ptr, cnt_ptr}
   {
     std::cerr << "#constructor      ";
